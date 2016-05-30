@@ -22,6 +22,11 @@ $(document).ready(function() {
     $("#sum_btn").click(function() {
         parent.location = '/podsumowanie.html';
     });
+
+    $("#next_step").click(function() {
+        parent.location = '/platnosc.html';
+    });
+
 });
 
 /**

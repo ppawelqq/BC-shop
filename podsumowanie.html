@@ -50,10 +50,66 @@
     </div>
 </nav>
 
-<ul class="list-group" id="sum_list" style="padding-top:50px">
-    "
-    <li class='list-group-item'>" + "aaaa" + "</li>"
-</ul>
+<div class="panel panel-default" style="padding-top:30px">
+    <div class="panel-heading">Dane kontaktowe</div>
+    <div class="panel-body">
+        <div class="column-panel">
+            <span id="left" style="float:left">
+            <p class="text-left">Imię:</p>
+            <p class="text-left">Nazwisko:</p>
+            <p class="text-left">Adres:</p>
+            <p class="text-left">Telefon:</p>
+          </span>
+
+            <p class="text-center">Testowe Imię</p>
+            <p class="text-center">Testowe Nazwisko</p>
+            <p class="text-center">Testoy Adres</p>
+            <p class="text-center">555-555-555</p>
+        </div>
+    </div>
+    <div class="panel-heading">Dane do faktury VAT</div>
+    <div class="panel-body">
+        <div class="column-panel">
+            <span id="left" style="float:left">
+          <p class="text-left">Imię:</p>
+          <p class="text-left">Nazwisko:</p>
+          <p class="text-left">Adres:</p>
+          <p class="text-left">Telefon:</p>
+        </span>
+
+            <p class="text-center">Testowe Imię</p>
+            <p class="text-center">Testowe Nazwisko</p>
+            <p class="text-center">Testoy Adres</p>
+            <p class="text-center">555-555-555</p>
+        </div>
+    </div>
+    <div class="panel-heading">Kontakt</div>
+    <div class="panel-body">
+        <div class="column-panel">
+            <span id="left" style="float:left">
+        <p class="text-left">Adres:</p>
+        <p class="text-left">Telefon:</p>
+      </span>
+            <p class="text-center">Testoy Adres</p>
+            <p class="text-center">555-555-555</p>
+        </div>
+    </div>
+
+    <div class="panel-heading">Podsumowanie zakupów</div>
+    <div class="panel-body">
+        <ul class="list-group" id="sum_list">
+            <li class='list-group-item'>" + "aaaa" + "</li>
+        </ul>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <button id="next_step" type="button" class="btn btn-default navbar-btn" style="float:right">
+                <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span> Następny krok </button>
+        </div>
+    </div>
+</div>
+
+
 
 <script>
     var localStorageCartItem = JSON.parse(localStorage.getItem("localStorageCart"));
