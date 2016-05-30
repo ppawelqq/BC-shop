@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>SKLEP INTERNETOWY</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="./scripts/shop.js"></script>
+    <script src="./scripts/check.js"></script>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <div class="btn-group">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseenter="_completionCart()">
+                    <span><i class="cart"></i></span> Koszyk <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="cart_menu" style="width:400px">
+                </ul>
+            </div>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <button id="prev_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Powrót</button>
+
+            <button id="contact_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt</button>
+
+            <button id="sum_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Podsumowanie</button>
+
+            <button id="logout_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Wyloguj</button>
+            <button type="button" style="opacity:1"></button>
+        </ul>
+    </div>
+</nav>
+
+<ul class="list-group" id="sum_list" style="padding-top:50px">
+    "
+    <li class='list-group-item'>" + "aaaa" + "</li>"
+</ul>
+
+<script>
+    var localStorageCartItem = JSON.parse(localStorage.getItem("localStorageCart"));
+    $("#sum_list").empty();
+
+    for (var i = 0; i < localStorageCartItem.length; i++) {
+        $("#sum_list").append(
+            "<li class='list-group-item'>" + localStorageCartItem[i].name + "</li>"
+        );
+    }
+</script>
+
+</html>
