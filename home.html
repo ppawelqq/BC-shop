@@ -1,6 +1,6 @@
 <html>
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,24 +9,81 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>SKLEP INTERNETOWY</title>
-      
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="style.css" rel="stylesheet">
-      
+
+    <script src="./scripts/shop.js"></script>
     <script src="./scripts/check.js"></script>
 
-  </head>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <div class="btn-group">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseenter="_completionCart()">
+                    <span><i class="cart"></i></span> Koszyk <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="cart_menu" style="width:400px">
+                </ul>
+            </div>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <button id="contact_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt</button>
 
-<body>
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    
-  </div>
+            <button id="sum_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Podsumowanie</button>
+
+            <button id="sum_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Podsumowanie</button>
+
+            <button id="logout_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Wyloguj</button>
+
+            <button type="button" style="opacity:1"></button>
+        </ul>
+    </div>
 </nav>
-</body>
+
+<div class="container" style="padding-top:50px">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/swimming.jpg" id="menu_swimming" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/running.jpg" id="menu_running" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/bike.jpg" id="menu_bike" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/roll.jpg" id="menu_roll" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/ski.jpg" id="menu_ski" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="./public/snowboard.jpg" id="menu_snowboard" style="opacity:0.4;cursor: pointer;width='400';height='400';">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 </html>
