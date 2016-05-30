@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>SKLEP INTERNETOWY</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="./scripts/check.js"></script>
+    <script src="./scripts/shop.js"></script>
+    <style>
+        #googleMap {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <div class="btn-group">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onmouseenter="_completionCart()">
+                    <span><i class="cart"></i></span> Koszyk <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="cart_menu" style="width:400px">
+                </ul>
+            </div>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <button id="prev_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Powrót</button>
+
+            <button id="sum_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Podsumowanie</button>
+
+            <button id="contact_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Kontakt</button>
+
+            <button id="logout_btn" type="button" class="btn btn-default navbar-btn">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Wyloguj</button>
+            <button type="button" style="opacity:1"></button>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div id="contact" class="contact_container" style="color:white">
+        <h3 class="text-center">KONTAKT</h3>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p>Twoje dane: </p>
+                <p><span class="glyphicon glyphicon-map-marker"></span>Polska, PL</p>
+                <p><span class="glyphicon glyphicon-phone"></span>Telefon: +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Email: admin@pjaneczek.pl</p>
+            </div>
+
+            <form class="form" role="form" method="post">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Imię" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="message" placeholder="Komentarz" rows="5"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn pull-right" type="submit">Wyślij</button>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <br>
+
+    </div>
+</div>
+<div id="googleMap"></div>
+<script>
+    var myCenter = new google.maps.LatLng(50.24839, 19.16481);
+
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 12,
+            scrollwheel: false,
+            draggable: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+        });
+
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</html>
